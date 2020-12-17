@@ -24,26 +24,32 @@
 
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    min-height: 100vh;
-    background-color: #ffffff;
+    padding : 0;
+    background-color: var(--background);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%237548be' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
     font-family : Oswald , sans-serif;
     font-size : 1.2rem;
+    color : var(--on-background);
 }
 
 /* Navigation */
 nav {
     margin : 0;
-    background-color : rgb(255 255 255 / 50%);
+    background-color : var(--background);
     padding : 45px;
     position : fixed;
     z-index: 10;
     width: 100vw;
     letter-spacing : 3px;
+    display : flex;
+    justify-content : space-around;
+    align-items: center;
 }
 
 nav a {
@@ -58,6 +64,46 @@ nav a:hover , nav a:active {
     border-bottom: 2px solid var(--on-background-alt);
 }
 
+/* Light-Dark-Mode */
+
+/* Dark Mode Button */
+
+#mode-text {color : var(--on-background);}
+.fas{color : var(--on-background);}
+
+.round {
+    display : inline-block;
+    position : relative;
+    width : 60px;
+    height : 30px;
+    background-color : whitesmoke;
+    vertical-align: middle;
+    border-radius : 100px;
+    transition: all 1s;
+    cursor : pointer;
+}
+
+.round::before {
+    content : "";
+    position : absolute;
+    width : 27px;
+    height : 27px;
+    top : 2px;
+    left : 4px;
+    background-color: #333;
+    border-radius: 50%;
+    transition : all 1s;
+}
+
+.switch input:checked + .round::before {
+    left : 30px;
+}
+
+.switch input:checked  + .round{
+    background-color: #55acee;
+}
+
+
 
 /* Sections */
 
@@ -67,4 +113,119 @@ section {
     display: flex;
     justify-content : center;
     align-items: center;
+    flex-direction : column;
+}
+
+h1 {
+    font-family: Kaushan Script , sans-serif;
+    font-size: 4rem;
+}
+
+h2 , h3 {
+    font-family : Comfortaa , sans-serif;
+    font-size : 2rem;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    text-align: center;
+}
+
+.project{
+    height : 200px;
+    width : 350px;
+    padding : 20px;
+    margin-right : 25px;
+    position : relative;
+    cursor : pointer;
+}
+
+
+.project-image {
+    height : 200px;
+    width : 100%;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+
+.project-image img {
+    width : 100%;
+    object-fit: contain;
+}
+
+.project-button {
+    height : 50px;
+    padding : 0;
+    position : absolute;
+    top : 45%;
+    right : 35%;
+    display : none;
+}
+
+.web-button{
+    border : 1px solid #e67e22;
+    padding : 8px 15px;
+    text-decoration : none;
+    color : #e67e22;
+    background-color: #fff;
+    border-radius : 10px;
+}
+
+.project-button:hover{
+    display : block;
+}
+
+.web-button:hover {
+    background-color: #e67e22;
+    color : #fff;
+}
+
+.project-image:hover + .project-button {
+    display : block;
+}
+
+.project-image:hover {
+    filter: brightness(25%);
+}
+
+
+
+
+/* Contacts Section */
+#contact {
+    flex-direction: row;
+}
+
+#contact a {
+    text-decoration : none;
+    color : var(--on-background);
+}
+
+.fab {
+    font-size : 500%;
+    margin-right : 30px;
+    cursor : pointer;
+}
+
+.fa-github:hover , .fa-github:active {
+    color : #171515;
+}
+
+.fa-twitter:hover , .fa-twitter:active {
+    color : #55acee;
+}
+
+.fa-reddit:hover , .fa-reddit:active {
+    color : #ff5700;
+}
+
+.fa-instagram:hover , .fa-instagram:active {
+    color : #e4405f;
+}
+
+.fa-facebook:hover , .fa-facebook:active {
+    color : #3B5998;   
 }

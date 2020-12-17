@@ -11,39 +11,76 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#proejcts">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
+        <div class="nav-buttons">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <div class="dark-mode-button">
+            <span id="mode-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+                <input type="checkbox" id="input" hidden>
+                <div class="round"></div>
+            </label>
+        </div>
     </nav>
 
     <!-- Sections -->
 
     <!-- Home Section -->
     <section id="home">
-        <h1>Some Random Title</h1>
-        <h2>Again Random SubTitle</h2>
+        <h1>Welcome to my portfolio website</h1>
+        <h2>Hi , it's me Rikesh</h2>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h1>Some Random Title</h1>
-        <h3>Again Random SubTitle</h3>
+        <h1>About</h1>
+        <h3>Checking Dark Mode using JS</h3>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h1>Some Random Title</h1>
-        <h3>Again Random SubTitle</h3>
+        <h1>My projects</h1>
+        <!-- Projects Container -->
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/project-1.png" alt="Visit-Nepal-Project" , title="Visit-Nepal-Project">
+                </div>
+                <div class="project-button">
+                    <a href="http://rikeshsilwalkhatri.com.np/" target="_blank" class="web-button">Visit Website</a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/project-2.png" alt="To-Do-Project" , title="To-Do-Project">
+                </div>
+                <div class="project-button">
+                    <a href="https://fancycodemaster.github.io/TO-DO-Web-App/" target="_blank" class="web-button">Visit Website</a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/project-3.png" alt="Infinity-Scroll-Project" , title="Infinity-Scroll-Project">
+                </div>
+                <div class="project-button">
+                    <a href="https://fancycodemaster.github.io/Infinity-Scroll/" target="_blank" class="web-button">Visit Website</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-reddit"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-reddit"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
     </section>
 
     <!-- Script  -->
